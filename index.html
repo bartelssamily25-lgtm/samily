@@ -4,62 +4,128 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MEU SITE</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+            color: #333;
+        }
 
+        header {
+            text-align: center;
+            padding: 30px;
+            background: #4b7bec;
+            color: white;
+        }
+
+        header img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            background: #3867d6;
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            background: white;
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #4b7bec;
+            color: white;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
     <header>
         <img src="img/images.jpg" alt="Foto de perfil">
         <h1>Samily Bartels</h1>
-        <p><em>Desenvolvedor web | Designer UI/UK</em></p>
+        <p><em>Desenvolvedora Web | Designer UI/UX</em></p>
     </header>
 
     <nav>
         <a href="#sobre">Sobre</a>
         <a href="#habilidades">Habilidades</a>
-        <a href="#expirencia">Experiência</a>
+        <a href="#experiencia">Experiência</a>
         <a href="#contato">Contato</a>
     </nav>
 
     <main>
         <section id="sobre">
             <h2>Sobre mim</h2>
-            <p>Sou desenvolvedora Web e designer UI/UX, com foco em criar interfaces modernas, responsivas e funcionais. 
-                Tenho experiência com HTML, CSS, JavaScript e boas práticas de design centrado no usuário.</p>
+            <p>Sou desenvolvedora Web e designer UI/UX, com foco em criar interfaces modernas, responsivas e funcionais. Tenho experiência com HTML, CSS, JavaScript e boas práticas de design centrado no usuário.</p>
         </section>
 
-        <section id="Habilidades">
+        <section id="habilidades">
             <h2>O que posso oferecer?</h2>
-            <p>⭐ Habilidades HardSkills: HTML, CSS, JavaScript, 
-                Design responsivo, Figma (UI/UX, protótipos, wireframes), Usabilidade e acessibilidade 
-                Criação de interfaces modernas ⭐ Habilidades SoftSkills: Criatividade, Atenção aos detalhes, Organização, Comunicação ,Trabalho em 
-                equipe, Facilidade de aprender</p>
-
+            <p><strong>⭐ Hard Skills:</strong> HTML, CSS, JavaScript, Design responsivo, Figma (UI/UX), protótipos, wireframes, usabilidade e acessibilidade.<br>
+               <strong>⭐ Soft Skills:</strong> Criatividade, atenção aos detalhes, organização, comunicação, trabalho em equipe e facilidade de aprender.
+            </p>
         </section>
 
-        <section id="experiência">
-
+        <section id="experiencia">
+            <h2>Experiência</h2>
+            <p>Aqui você pode adicionar seus projetos, trabalhos anteriores ou estudos importantes.</p>
         </section>
 
         <section id="video">
-
+            <h2>Meu vídeo/apresentação</h2>
+            <p>Adicione aqui um vídeo ou apresentação futuramente.</p>
         </section>
 
         <section id="contato">
             <h2>Contato e Redes Sociais</h2>
-            <p><strong>Email:</strong> </p>
-            <p><strong>Telefone:</strong> (27) 995135735</p>
-
+            <p><strong>Email:</strong> samilybartels@icloud.com</p>
+            <p><strong>Telefone:</strong> (27) 99513-5735</p>
         </section>
-
     </main>
 
     <footer>
         <p>&copy; 2025 Samily Bartels - Todos os direitos reservados.</p>
     </footer>
 
+<script>
+    // Rolagem suave ao clicar no menu
+    document.querySelectorAll('nav a').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            target.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+</script>
 
-
-
-    
 </body>
 </html>
